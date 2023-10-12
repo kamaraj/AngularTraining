@@ -1,0 +1,51 @@
+-- MySQL dump 10.13  Distrib 8.0.34, for Linux (x86_64)
+--
+-- Host: 172.22.0.8    Database: akeneo_pim
+-- ------------------------------------------------------
+-- Server version	8.0.30
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `pim_configuration`
+--
+
+DROP TABLE IF EXISTS `pim_configuration`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `pim_configuration` (
+  `code` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `values` json NOT NULL,
+  PRIMARY KEY (`code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pim_configuration`
+--
+
+LOCK TABLES `pim_configuration` WRITE;
+/*!40000 ALTER TABLE `pim_configuration` DISABLE KEYS */;
+INSERT INTO `pim_configuration` VALUES ('install_data','{\"database_installed_at\": \"2023-10-06T10:28:42+00:00\"}'),('OPENID_ASYMMETRIC_KEYS','{\"public_key\": \"-----BEGIN CERTIFICATE-----\\r\\nMIIC7zCCAdegAwIBAgIUfvdZoXsscT4aq6Qc2E69vSUMQWUwDQYJKoZIhvcNAQEL\\r\\nBQAwETEPMA0GA1UECgwGQWtlbmVvMB4XDTIzMTAwNjEwMjg0MloXDTI0MTAwNjEw\\r\\nMjg0MlowETEPMA0GA1UECgwGQWtlbmVvMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A\\r\\nMIIBCgKCAQEAyjNBfA0TA//kh+kKLTrXwjS8Kpaxluw4jggEAGOdoYhkh0EnBqWf\\r\\nuwhY0ISeC4+embzM/VrPLwo8sgoTPFVv9m3ybkN9RgG7kynZs+6i+rB21IuBcw5h\\r\\n0FvUwJxwQbIeDxSuZidxO6hRovn/R/WlPv4Qm24Q9tKE5YIiu9wxgKf/uUvz6bsw\\r\\nuS7P9H3yhuCbYUM5Qbv77vc1et7vsjOYSOpYlv2sESS2TqU2aXBlKCK2QRZSMpvE\\r\\n5bZro09BtGfPV95mrKiQ7u3ADaxozQu/4NFrIv4bmhPTmyuOEDdV7pFYnk7VBjVd\\r\\n1HiBwMX81yJMvClXiDtnDD6MfnYIqODprQIDAQABoz8wPTALBgNVHQ8EBAMCAQYw\\r\\nDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU/Tdn85x5iuPc1DNeyYTcENPI86kw\\r\\nDQYJKoZIhvcNAQELBQADggEBAEMhmiF6Ods3AKN6LGZYw8D0HgeY4YwkFkl3sApJ\\r\\nIk6P2ntbt5pHnNnriTxafNlOLvtVi5TM7Zk6QAlnTK6ZuJ0Ec2W3LZanfsxW986j\\r\\nzX+wLEVmR6+IU7jCpvTd42XCQcK0lQVXn7D5z7SQKHe52zeBoK4fpiylB4vxSv/X\\r\\nLphnsMyPHM/L5ZzCud+XdFIGsmCRk7v+Y5ZE9vGDf8Z+QXf5ZrcYNWQT98NQ2tko\\r\\nxn+A81BGACEA6WwzD7Ba+O9gO9opJdWUdTEDkCANFXHfgUEFN/GKn9W2VlGsc1iZ\\r\\n2bITDMIoyytgtbNlpm+2M3ERZODV97tfkh6mr5THdpTB2cs=\\r\\n-----END CERTIFICATE-----\", \"updated_at\": \"2023-10-06T10:28:42+00:00\", \"private_key\": \"-----BEGIN RSA PRIVATE KEY-----\\r\\nMIIEowIBAAKCAQEAyjNBfA0TA//kh+kKLTrXwjS8Kpaxluw4jggEAGOdoYhkh0En\\r\\nBqWfuwhY0ISeC4+embzM/VrPLwo8sgoTPFVv9m3ybkN9RgG7kynZs+6i+rB21IuB\\r\\ncw5h0FvUwJxwQbIeDxSuZidxO6hRovn/R/WlPv4Qm24Q9tKE5YIiu9wxgKf/uUvz\\r\\n6bswuS7P9H3yhuCbYUM5Qbv77vc1et7vsjOYSOpYlv2sESS2TqU2aXBlKCK2QRZS\\r\\nMpvE5bZro09BtGfPV95mrKiQ7u3ADaxozQu/4NFrIv4bmhPTmyuOEDdV7pFYnk7V\\r\\nBjVd1HiBwMX81yJMvClXiDtnDD6MfnYIqODprQIDAQABAoIBAEHuuLm0obC6LlDL\\r\\nApCBEX24KGtSvBHUcRSPNI7T7MCRcwZPjmQyeYVJUXyc4dQvPq4uzEEI7WoPUn9T\\r\\nnbYcveeDLnwZ8a10Py/bg6uScv5/sB/aZZmY5PhGGXe9CzXA2OBeBAg3cErdtdEI\\r\\n598VEI8b1Vp5Z3q0ZrVX2++Z+2JR0TounWNLr9VP/RV+Oe3JZgyRfo1g+wfyKqnb\\r\\nLm3V0HOpN6D6MePmx+FBfoMPvegSeCJakVGsrNrCugtRgB4byPxkcX+G5l5jc/qf\\r\\n05pp6KJ1INfhT4HAb1fy989g/sUuGiX0bxy/kHBoWx0V7wjV4yVVXcBKAksxEFXL\\r\\nUduGhtkCgYEA6W/dIhXMsRtWriWzc3bNWBr2o85O0E3p4MwrsD5iUnRs26/wz6hH\\r\\nA3FfizHYVfyL0sBjKWE2tkNv3RfvIrcJWDvdtVHhK6GehFIRhYPrBDC08+LDWSTC\\r\\nhT5PSFwM5DO7ULHE+3KrZ67ziwBDbflrFEnks0jpHxGIEel/YyZnOd8CgYEA3b55\\r\\nPzNxTNX7Xuiy4T7yXopGmsiCg0iIqdsS41ev2MaZGNL/snsEzVahjb28g1MqNYEA\\r\\nvfVty7lB08juXw9vZBugTsnSwOGRnmsU7mxy8oBXE9VrVNufWc95x8vHkH2ooxSj\\r\\neRqcUt4Wr+mWOhEMZPJ9VtEKtY134U6ZvQbwZfMCgYAZsEG5eoSoCMYlK+jvj+dR\\r\\nBsaViCKMMcbHAjDcmEDhqgZAtr/dWjtWWaeV/co8zCnm61z+NMB8ljc9MWEThOj2\\r\\nWMAxL+2Di6mSDiX3d2jpcSK4o/+zU6REXXMEF30jr72xR57RvPC33DzY0xKYi5YJ\\r\\nCYitYhylWpyKvBNUqek6KQKBgQDUM9yaM+OgUUK+n9fXoMKW4KMSqwHjGv3V9tWL\\r\\nhLW+sMeALyQNrJZ63wW5vDJ0RpklHLAWGZIaHM63GxmrFP1XguyVmaS7euI9BWLB\\r\\njD0wfstWKq4NRiOn8dor7oKrbuV8M1sBoQqqbuitLc/a/8eprzltZJ1oAtsPXYXY\\r\\nlJRoKwKBgFsk2quV5NiIZpKyUzePImrlXfrQvTBMQlbEoABlBeFMQjewJONGI19z\\r\\n9lJVnQTQp+VbK/dhyP1DV7BVSZMBVUTDCwuJGvK6wkltsogrckw2CWTPT+JTJQAK\\r\\nvf/ib4RJyPrpbZJOsol9e/xyyVQCH27+p4yuQ5eoWnQPOaztKkf7\\r\\n-----END RSA PRIVATE KEY-----\"}');
+/*!40000 ALTER TABLE `pim_configuration` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-10-12  4:52:16
